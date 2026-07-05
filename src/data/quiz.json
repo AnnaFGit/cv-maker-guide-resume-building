@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Which CV format is the safest and most expected default for most job seekers?",
+      "options": [
+        "Functional (skills-first layout)",
+        "Reverse-chronological (newest jobs first)",
+        "Graphic layout (with icons and visual timelines)",
+        "Combination (skills-focused header with chronological experience)"
+      ],
+      "answerIndex": 1,
+      "explanation": "Reverse-chronological is the safest default because it is easily read by all ATS parsers and is preferred by recruiters who want to see your career progression quickly."
+    },
+    {
+      "id": "q2",
+      "text": "What design element is most likely to scramble or break an Applicant Tracking System (ATS)?",
+      "options": [
+        "Standard fonts like Arial or Georgia",
+        "Single-column vertical layouts",
+        "PDF file exports",
+        "Multi-column sidebars, tables, and text boxes"
+      ],
+      "answerIndex": 3,
+      "explanation": "Multi-column structures, text boxes, and tables are often parsed left-to-right straight across, scrambling unrelated columns of text together."
+    },
+    {
+      "id": "q3",
+      "text": "Which of these is the most effective structure for an experience bullet point?",
+      "options": [
+        "Responsible for handling customer inquiries and administrative duties.",
+        "A detailed paragraph explaining your daily schedule and routines.",
+        "Action Verb + Actions Taken + Quantifiable / Measurable Result.",
+        "A list of software programs you used during your time at the job."
+      ],
+      "answerIndex": 2,
+      "explanation": "Quantified bullets (e.g., 'Grew sales 25% by implementing X') demonstrate concrete impact and catch the eye far better than boring descriptions of responsibilities."
+    },
+    {
+      "id": "q4",
+      "text": "When applying for jobs in the US, UK, or Canada, should you include a photo on your resume?",
+      "options": [
+        "Yes, it helps recruiters put a face to your name.",
+        "No, it triggers automated bias filters and legal compliance rejections.",
+        "Only if you use a high-quality professional headshot.",
+        "Only in black and white to keep file sizes low."
+      ],
+      "answerIndex": 1,
+      "explanation": "In these countries, companies frequently auto-reject resumes with photos to protect themselves from accusations of discrimination based on age, race, or gender."
+    },
+    {
+      "id": "q5",
+      "text": "What is the best way to handle keywords from the job description on your CV?",
+      "options": [
+        "Copy and paste the entire job posting in tiny white text at the bottom.",
+        "Repeat the job title 10-15 times in your experience bullets.",
+        "Avoid using them so your CV doesn't look copied.",
+        "Mirror exact terms and acronyms naturally within your experience and skills sections."
+      ],
+      "answerIndex": 3,
+      "explanation": "Mirroring exact keywords and spelling is crucial for ATS matching, but it must read naturally to the human recruiter. White text tricks or stuffing get flagged as spam."
+    }
+  ]
+}

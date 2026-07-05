@@ -1,0 +1,2 @@
+# Custom 404 page redirect for Apache hosting
+ErrorDocument 404 /404.html

@@ -1,0 +1,80 @@
+{
+  "skills-first": {
+    "opening": [
+      "As a {role} with {years} years of experience specializing in {strength1} and {strength2}, I am eager to bring my expertise to the {targetRole} position at {company}.",
+      "With {years} years of professional experience in {strength1}, {strength2}, and {strength3}, I was excited to see the {targetRole} opening at {company}.",
+      "Having spent {years} years honing my skills in {strength1} and {strength2}, I am confident I can make an immediate contribution as {targetRole} at {company}.",
+      "My {years} years of experience in {strength1} and {strength2} have prepared me well for the {targetRole} role at {company}, and I would welcome the opportunity to bring that expertise to your team."
+    ],
+    "body1": [
+      "In my current role, I have applied my {strength1} expertise to deliver measurable results. {companyDetail} resonates with my professional values, and I see a clear opportunity to contribute meaningfully to your team's objectives in {strength2}.",
+      "My background in {strength1} has equipped me to tackle complex challenges with precision. I have consistently delivered results in {strength2} environments, and {companyDetail} aligns directly with my professional focus.",
+      "Throughout my career, I have built deep competency in {strength1} and {strength2}. I am particularly drawn to {company} because {companyDetail}, which mirrors the kind of work where I have delivered my strongest results.",
+      "I bring hands-on experience in {strength1} and a track record of success in {strength2}. What excites me about {company} is {companyDetail} — an area where I have consistently driven impactful outcomes."
+    ],
+    "body2": [
+      "Beyond my core strengths, I bring demonstrated ability in {strength3}, which I understand is important for this position. I thrive in collaborative settings and am committed to continuous improvement in every project I undertake.",
+      "My proficiency in {strength3} complements my primary expertise and enables me to contribute across multiple dimensions of the role. I am eager to apply this breadth of skills to the challenges at {company}.",
+      "Additionally, my experience with {strength3} provides a well-rounded foundation that I believe will be valuable to your team. I approach each project with discipline, curiosity, and a results-first mindset.",
+      "I also bring practical experience in {strength3}, rounding out a skill set that enables me to contribute from day one. I am passionate about delivering work that drives real business value."
+    ],
+    "closing": [
+      "I would welcome the opportunity to discuss how my {strength1} and {strength2} background can help {company} achieve its goals. Thank you for your time and consideration.",
+      "I look forward to the chance to discuss how my skills in {strength1} and {strength2} can contribute to {company}'s success. Thank you for considering my application.",
+      "I am excited about the possibility of joining {company} and would appreciate the chance to speak further. Thank you for your time.",
+      "I would be glad to elaborate on how my experience aligns with {company}'s needs. Thank you for reviewing my application."
+    ]
+  },
+  "problem-solution": {
+    "opening": [
+      "When I learned about the {targetRole} position at {company}, I immediately recognized the opportunity to apply my {years} years of experience solving complex challenges in {strength1} and {strength2}.",
+      "The {targetRole} role at {company} caught my attention because it calls for exactly the kind of problem-solving I have been doing for the past {years} years — tackling challenges in {strength1} and delivering results through {strength2}.",
+      "With {years} years of experience identifying and resolving challenges in {strength1}, I am excited to apply that problem-solving approach to the {targetRole} role at {company}.",
+      "As someone who has spent {years} years solving real-world problems through {strength1} and {strength2}, I see the {targetRole} position at {company} as an ideal next step."
+    ],
+    "body1": [
+      "In my career, I have repeatedly turned challenges into measurable wins. By applying my expertise in {strength1}, I have helped teams overcome obstacles and deliver stronger outcomes. {companyDetail} presents exactly the kind of challenge I thrive on, and I am confident my approach to {strength2} would drive results.",
+      "I have a track record of diagnosing problems and implementing solutions in {strength1} that produce tangible outcomes. {companyDetail} signals the kind of environment where my experience in {strength2} would have the greatest impact.",
+      "My approach has always been to understand the root of a problem before acting. In {strength1}, I have consistently identified the core issue and delivered solutions that improved outcomes. {companyDetail} resonates with this method, and I see strong alignment with my expertise in {strength2}.",
+      "Problem-solving has defined my career. From improving processes through {strength1} to driving results in {strength2}, I bring a disciplined, impact-focused approach. {companyDetail} tells me {company} values the same kind of thinking."
+    ],
+    "body2": [
+      "Beyond solving immediate challenges, I focus on building systems that prevent future problems. My experience in {strength3} has taught me to think long-term, ensuring solutions are sustainable and scalable.",
+      "I also bring depth in {strength3}, which has been instrumental in building solutions that last. I believe sustainable impact comes from combining tactical execution with strategic thinking.",
+      "My work in {strength3} has reinforced my belief that the best solutions address both the symptom and the system. I am eager to bring that comprehensive problem-solving mindset to {company}.",
+      "Additionally, my background in {strength3} enables me to see challenges from multiple angles — a perspective that has consistently led to more robust and lasting solutions."
+    ],
+    "closing": [
+      "I would welcome the chance to discuss how my problem-solving approach in {strength1} and {strength2} can help {company} tackle its most pressing challenges. Thank you for your consideration.",
+      "I am eager to explore how my experience can contribute to {company}'s goals. I appreciate your time and look forward to the opportunity to connect.",
+      "I would be glad to discuss specific examples of how I have delivered results in situations similar to those at {company}. Thank you for your time.",
+      "I look forward to the possibility of bringing my problem-solving expertise to {company}. Thank you for considering my application."
+    ]
+  },
+  "story-impact": {
+    "opening": [
+      "My journey into {strength1} began {years} years ago, and since then I have built a career around turning ideas into impact through {strength2}. The {targetRole} position at {company} feels like a natural next chapter.",
+      "Over the past {years} years, my career has been shaped by a deep commitment to {strength1} and the tangible results I have delivered through {strength2}. The {targetRole} opportunity at {company} strongly resonates with that trajectory.",
+      "{years} years ago, I chose to focus my career on {strength1} — a decision that has led me through progressively challenging roles where {strength2} has been central to my impact. I am excited to bring that experience to {company} as {targetRole}.",
+      "What began as a passion for {strength1} has evolved into a {years}-year career built on delivering real impact through {strength2}. The {targetRole} role at {company} is where I see my experience making the greatest difference."
+    ],
+    "body1": [
+      "Throughout my career, I have sought environments where my work in {strength1} could create meaningful change. {companyDetail} tells me that {company} shares that commitment, and I would bring my experience in {strength2} to help further that mission.",
+      "One theme that runs through my career is using {strength1} to drive outcomes that matter. {companyDetail} is exactly the kind of purpose that motivates my best work, and I see a strong opportunity to contribute through {strength2}.",
+      "My career has been defined by moments where {strength1} created real value for the people and organizations I have worked with. {companyDetail} suggests {company} operates with the same mindset, and I am eager to contribute through {strength2}.",
+      "I have always been drawn to work where {strength1} leads to visible, lasting impact. {companyDetail} signals that {company} values results over process, which aligns with how I have built my career through {strength2}."
+    ],
+    "body2": [
+      "Beyond the technical dimensions of my work, I bring a human-centered approach to collaboration and leadership. My experience in {strength3} has taught me that the best outcomes emerge when people feel supported and empowered.",
+      "I also bring a strong foundation in {strength3}, which has enriched my ability to work across teams and build the kind of trust that drives collective success.",
+      "My experience in {strength3} has complemented my core expertise by grounding my work in empathy and collaboration — skills I consider essential for any culture-driven team.",
+      "Alongside my technical expertise, I have cultivated deep capabilities in {strength3}. I believe that lasting impact comes not just from individual skill, but from building strong working relationships."
+    ],
+    "closing": [
+      "I would love the opportunity to share how my experience in {strength1} and {strength2} can support {company}'s mission. Thank you for your time and consideration.",
+      "I am excited about the possibility of contributing to {company}'s culture and goals. I would welcome a conversation about how my background aligns with your vision.",
+      "I look forward to the opportunity to discuss how my career journey and expertise in {strength1} can add value to {company}. Thank you for considering my application.",
+      "I am inspired by what {company} is building and would be grateful for the chance to contribute. Thank you for your time."
+    ]
+  }
+}

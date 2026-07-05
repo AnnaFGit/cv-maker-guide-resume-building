@@ -1,0 +1,22 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#C46A38"/>
+      <stop offset="1" stop-color="#A8431F"/>
+    </linearGradient>
+    <filter id="ds" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="26" flood-color="#3A1A0C" flood-opacity="0.30"/>
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" rx="228" fill="url(#tile)"/>
+  <g filter="url(#ds)">
+    <rect x="298" y="214" width="428" height="596" rx="38" fill="#FFFDF9"/>
+  </g>
+  <text x="512" y="486" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-weight="600" font-size="232" fill="#211D18" letter-spacing="-6">CV</text>
+  <rect x="430" y="540" width="164" height="14" rx="7" fill="#B9502E"/>
+  <g fill="#E4DBCC">
+    <rect x="372" y="606" width="280" height="16" rx="8"/>
+    <rect x="372" y="648" width="280" height="16" rx="8"/>
+    <rect x="372" y="690" width="210" height="16" rx="8"/>
+  </g>
+</svg>

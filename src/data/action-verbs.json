@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "note": "Action verbs for the CV builder's bullet helper. Grouped so the UI can suggest by intent. All past-tense; the builder should offer present-tense for the user's current role.",
+  "groups": {
+    "leadership": ["Led", "Directed", "Managed", "Oversaw", "Supervised", "Coordinated", "Headed", "Chaired", "Mentored", "Coached", "Guided", "Delegated", "Orchestrated", "Spearheaded", "Championed", "Mobilized", "Unified", "Established"],
+    "achievement_impact": ["Achieved", "Delivered", "Exceeded", "Surpassed", "Won", "Secured", "Earned", "Generated", "Drove", "Produced", "Attained", "Outperformed", "Captured", "Realized"],
+    "built_created": ["Built", "Created", "Developed", "Designed", "Engineered", "Launched", "Founded", "Established", "Implemented", "Deployed", "Architected", "Produced", "Formulated", "Devised", "Initiated", "Pioneered", "Introduced", "Prototyped"],
+    "improved_optimized": ["Improved", "Increased", "Boosted", "Enhanced", "Optimized", "Streamlined", "Accelerated", "Strengthened", "Upgraded", "Refined", "Modernized", "Simplified", "Standardized", "Transformed", "Revamped", "Scaled"],
+    "reduced_saved": ["Reduced", "Cut", "Decreased", "Lowered", "Minimized", "Eliminated", "Saved", "Consolidated", "Trimmed", "Reconciled"],
+    "analysis_research": ["Analyzed", "Evaluated", "Assessed", "Researched", "Investigated", "Measured", "Forecasted", "Modeled", "Audited", "Diagnosed", "Identified", "Quantified", "Tracked", "Mapped", "Benchmarked"],
+    "communication": ["Presented", "Negotiated", "Persuaded", "Communicated", "Advised", "Consulted", "Influenced", "Authored", "Documented", "Reported", "Pitched", "Facilitated", "Collaborated", "Partnered", "Aligned", "Liaised"],
+    "operations_process": ["Executed", "Operated", "Administered", "Processed", "Maintained", "Organized", "Scheduled", "Planned", "Allocated", "Budgeted", "Procured", "Automated", "Integrated", "Migrated", "Configured", "Resolved"],
+    "growth_sales": ["Acquired", "Grew", "Expanded", "Converted", "Retained", "Upsold", "Closed", "Prospected", "Onboarded", "Cultivated", "Sourced"]
+  }
+}

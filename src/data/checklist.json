@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "contact",
+      "name": "Contact Information",
+      "items": [
+        { "id": "contact-email", "text": "Used a professional email address (e.g., firstname.lastname@domain.com)." },
+        { "id": "contact-phone", "text": "Included a current phone number with country/area code." },
+        { "id": "contact-location", "text": "Listed only City, Country rather than a full street address for safety." },
+        { "id": "contact-linkedin", "text": "Provided a clean, direct link to your LinkedIn profile." },
+        { "id": "contact-photo", "text": "Removed profile photo (unless standard in your specific region/industry)." }
+      ]
+    },
+    {
+      "id": "layout",
+      "name": "Layout & Design",
+      "items": [
+        { "id": "layout-column", "text": "Kept the layout to a single column to ensure ATS compatibility." },
+        { "id": "layout-graphics", "text": "Removed tables, text boxes, progress bars, icons, or graphics." },
+        { "id": "layout-length", "text": "Limited CV to 1 page (under 10 years experience) or 2 pages maximum." },
+        { "id": "layout-font", "text": "Used a clean, professional font (10-12pt body, slightly larger headings)." },
+        { "id": "layout-whitespace", "text": "Maintained generous margins (0.5 to 1 inch) and proper spacing." }
+      ]
+    },
+    {
+      "id": "summary",
+      "name": "Professional Summary",
+      "items": [
+        { "id": "summary-length", "text": "Summary is concise (2-3 sentences or bullet points maximum)." },
+        { "id": "summary-objective", "text": "Omitted old-fashioned objective statements; focused on what you offer." },
+        { "id": "summary-value", "text": "Clearly frames your professional identity and key value proposition." }
+      ]
+    },
+    {
+      "id": "experience",
+      "name": "Experience & Bullet Points",
+      "items": [
+        { "id": "exp-action-verbs", "text": "Started every single bullet point with a strong, active verb in past tense." },
+        { "id": "exp-quantify", "text": "Quantified results wherever possible (percentages, dollar amounts, time saved)." },
+        { "id": "exp-structure", "text": "Structured bullets as: Action Verb + Task + Measurable Result." },
+        { "id": "exp-relevance", "text": "Tailored experience to match the target job description requirements." },
+        { "id": "exp-reorder", "text": "Listed roles in strict reverse-chronological order (newest first)." }
+      ]
+    },
+    {
+      "id": "skills",
+      "name": "Skills & Keywords",
+      "items": [
+        { "id": "skills-list", "text": "Created a clean, separate section for hard skills, tools, and platforms." },
+        { "id": "skills-keywords", "text": "Matched exact terms and acronyms from the target job posting." },
+        { "id": "skills-stuffing", "text": "Avoided spamming or stacking keywords unnaturally." }
+      ]
+    }
+  ]
+}

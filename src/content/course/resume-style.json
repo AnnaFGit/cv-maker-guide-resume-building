@@ -1,0 +1,8 @@
+{
+  "index": 4,
+  "slug": "resume-style",
+  "title": "Style & formatting",
+  "minutes": 3,
+  "type": "howto",
+  "content": "Looks matter, but readability and ATS-safety matter more.\n\n- **Length:** 1 page for most people; 2 pages if you have 10+ years of relevant experience. Never pad.\n- **Font:** a clean, common font (Inter, Calibri, Arial, Helvetica, Georgia). 10–12pt body, slightly larger headings.\n- **Layout:** single column. **Avoid tables, text boxes, columns, headers/footers, icons, and graphics** - they're exactly what break ATS parsing. The CV builder in this app keeps you safe automatically.\n- **Whitespace:** generous margins and spacing beat cramming. A recruiter skims in seconds.\n- **File type:** export as **PDF** unless the posting asks for Word (.docx). PDF preserves your layout; some older ATS prefer .docx, so follow the instructions if given.\n- **File name:** `Firstname_Lastname_CV.pdf`, not `resume_final_v3.pdf`.\n- **Proofread.** One typo can end it. Read it aloud and have someone else check.\n\n---"
+}
