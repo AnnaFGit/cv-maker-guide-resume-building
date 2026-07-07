@@ -70,7 +70,7 @@ export default function ExportButton({
         variant="primary"
         onClick={handleExport}
         disabled={isExporting}
-        className="flex items-center gap-2 shrink-0"
+        className="w-full md:w-auto flex items-center justify-center gap-2 shrink-0"
       >
         {isExporting ? (
           <>

@@ -43,7 +43,9 @@ export default function AdSlot({
 
   useEffect(() => {
     // Reset loading state on pathname change to allow pushing for new pages
-    setAdLoaded(false);
+    setTimeout(() => {
+      setAdLoaded(false);
+    }, 0);
   }, [pathname]);
 
   useEffect(() => {
@@ -62,17 +64,17 @@ export default function AdSlot({
       // Guard double-push: only push if the ins tag has not been processed yet
       if (insElement && !insElement.hasAttribute("data-adsbygoogle-status") && !adLoaded) {
         (window.adsbygoogle = window.adsbygoogle || []).push({});
-        setAdLoaded(true);
+        setTimeout(() => {
+          setAdLoaded(true);
+        }, 0);
       }
     } catch (err) {
       console.warn("AdSense push failed:", err);
     }
   }, [pathname, isOnline, adLoaded]);
 
-  // Don't render ads if offline or on the builder editor page
-  if (!isOnline || pathname.includes("/builder/edit/")) {
-    return null;
-  }
+  // Comment out ads for now. Can be enabled in the future.
+  return null;
 
   return (
     <div className={`my-6 flex justify-center items-center overflow-hidden bg-surface/50 border border-dashed border-border-strong rounded-2xl min-h-[90px] w-full text-center ${className}`}>

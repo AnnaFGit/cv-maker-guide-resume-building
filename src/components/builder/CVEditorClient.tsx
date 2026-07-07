@@ -213,7 +213,7 @@ export default function CVEditorClient() {
         </div>
 
         {/* Actions panel */}
-        <div className="flex flex-row items-center justify-between gap-2.5 w-full md:w-auto md:justify-end md:gap-4 shrink-0">
+        <div className="flex flex-row flex-wrap items-center justify-between gap-3 w-full md:flex-nowrap md:w-auto md:justify-end md:gap-4 shrink-0">
           {/* Mobile view toggle */}
           <div className="flex bg-surface border border-border-strong rounded-xl p-0.5 md:hidden shrink-0">
             <button

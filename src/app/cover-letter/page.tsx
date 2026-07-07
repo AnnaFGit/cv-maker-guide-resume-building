@@ -49,7 +49,7 @@ export default function CoverLetterPage() {
     {
       title: "What should I avoid in a cover letter?",
       content:
-        'Avoid clichés like "I am a team player" or "I am passionate about excellence." Don\'t simply repeat your CV. Don\'t use "To Whom It May Concern" — find the hiring manager\'s name or use the team name.',
+        'Avoid clichés like "I am a team player" or "I am passionate about excellence." Don\'t simply repeat your CV. Don\'t use "To Whom It May Concern" - find the hiring manager\'s name or use the team name.',
     },
     {
       title: "Is this builder free? Does it use AI?",

@@ -232,19 +232,7 @@ export default function CLEditorClient() {
   const checks: CLCheck[] = useMemo(() => {
     if (!record) return [];
     return runCLChecks(record.sections, record.recipient);
-  }, [record?.sections, record?.recipient]);
-
-  // Strength chip toggle
-  const toggleStrength = (strength: string) => {
-    updateRecord((prev) => {
-      const idx = prev.selectedStrengths.indexOf(strength);
-      if (idx >= 0) {
-        return { ...prev, selectedStrengths: prev.selectedStrengths.filter((_, i) => i !== idx) };
-      }
-      if (prev.selectedStrengths.length >= 10) return prev;
-      return { ...prev, selectedStrengths: [...prev.selectedStrengths, strength] };
-    });
-  };
+  }, [record]);
 
   const removeStrength = (strength: string) => {
     updateRecord((prev) => ({

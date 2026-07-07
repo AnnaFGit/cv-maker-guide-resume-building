@@ -4,7 +4,7 @@ import "./globals.css";
 import AppHeader from "@/components/ui/AppHeader";
 import BottomTabBar from "@/components/ui/BottomTabBar";
 import JsonLd from "@/components/ui/JsonLd";
-import { CANONICAL_URL, SITE_NAME, ADSENSE_PUB_ID } from "@/lib/constants";
+import { CANONICAL_URL, SITE_NAME } from "@/lib/constants";
 
 const newsreader = localFont({
   src: [
@@ -122,11 +122,40 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        {/* All Juforce - Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NBPTW2LBGZ" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-NBPTW2LBGZ');
+            `,
+          }}
+        />
+
+        {/* resume-building.juforce.com - Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-R44PJB4BYH" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-R44PJB4BYH');
+            `,
+          }}
+        />
+
+        {/* Commented out AdSense tag for future use */}
+        {/*
         <script
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_PUB_ID}`}
           crossOrigin="anonymous"
         />
+        */}
         <script
           dangerouslySetInnerHTML={{
             __html: `

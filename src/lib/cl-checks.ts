@@ -66,14 +66,14 @@ export function runCLChecks(
     checks.push({
       passed: false,
       title: `Too Short (${wordCount} words)`,
-      description: `Your letter body is ${wordCount} words. Aim for 150–250 words — most effective cover letters are about half a page.`,
+      description: `Your letter body is ${wordCount} words. Aim for 150-250 words - most effective cover letters are about half a page.`,
       severity: "warning",
     });
   } else if (wordCount > 250) {
     checks.push({
       passed: false,
       title: `Too Long (${wordCount} words)`,
-      description: `Your letter body is ${wordCount} words. Keep it under 250 words — hiring managers scan, not read.`,
+      description: `Your letter body is ${wordCount} words. Keep it under 250 words - hiring managers scan, not read.`,
       severity: "warning",
     });
   } else {

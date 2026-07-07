@@ -38,26 +38,45 @@ export function openExternal(url: string): void {
 export function exportPDF(filename: string, dataBase64: string): void {
   if (isNative()) {
     postMessage({ type: "exportPDF", filename, dataBase64 });
-  } else {
-    try {
-      const byteCharacters = atob(dataBase64);
-      const byteNumbers = new Array(byteCharacters.length);
-      for (let i = 0; i < byteCharacters.length; i++) {
-        byteNumbers[i] = byteCharacters.charCodeAt(i);
-      }
-      const byteArray = new Uint8Array(byteNumbers);
-      const blob = new Blob([byteArray], { type: "application/pdf" });
-      const url = URL.createObjectURL(blob);
-      
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = filename;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
-    } catch (err) {
-      console.error("Failed browser fallback PDF export:", err);
+    return;
+  }
+
+  try {
+    const byteCharacters = atob(dataBase64);
+    const byteNumbers = new Array(byteCharacters.length);
+    for (let i = 0; i < byteCharacters.length; i++) {
+      byteNumbers[i] = byteCharacters.charCodeAt(i);
     }
+    const byteArray = new Uint8Array(byteNumbers);
+    const blob = new Blob([byteArray], { type: "application/pdf" });
+
+    // 1. Try Web Share API (navigator.share) for iOS Safari and mobile wrappers
+    const file = new File([blob], filename, { type: "application/pdf" });
+    if (
+      typeof navigator !== "undefined" &&
+      navigator.canShare &&
+      navigator.canShare({ files: [file] })
+    ) {
+      navigator.share({
+        files: [file],
+        title: filename,
+      }).catch((err) => {
+        // If the user cancelled or finished, keep them in the app
+        console.log("Share completed or cancelled:", err);
+      });
+      return;
+    }
+
+    // 2. Fallback to standard anchor link download for desktop/non-share environments
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  } catch (err) {
+    console.error("Failed PDF export:", err);
   }
 }

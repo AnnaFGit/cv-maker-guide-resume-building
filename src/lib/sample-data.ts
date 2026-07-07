@@ -69,7 +69,7 @@ export const SAMPLE_CV_DATA: CVData = {
       items: [
         {
           id: "opt-item-sample-1",
-          title: "AWS Certified Solutions Architect — Associate",
+          title: "AWS Certified Solutions Architect - Associate",
           subtitle: "Amazon Web Services (AWS)",
           date: "2024",
         },
