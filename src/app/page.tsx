@@ -4,6 +4,7 @@ import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import Accordion from "@/components/ui/Accordion";
 import AdSlot from "@/components/ui/AdSlot";
+import { AD_SLOTS } from "@/lib/constants";
 import JsonLd from "@/components/ui/JsonLd";
 
 export default function Home() {
@@ -84,85 +85,93 @@ export default function Home() {
 
       {/* Feature Cards Grid */}
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Card hoverEffect className="flex flex-col gap-3 justify-between">
-          <div className="flex flex-col gap-2">
-            <div className="text-accent-text bg-accent/10 p-2.5 rounded-xl w-fit">
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-              </svg>
+        <Link href="/builder/" className="block h-full group focus-ring rounded-2xl">
+          <Card hoverEffect className="h-full flex flex-col gap-3 justify-between">
+            <div className="flex flex-col gap-2">
+              <div className="text-accent-text bg-accent/10 p-2.5 rounded-xl w-fit group-hover:bg-accent/20 transition-colors">
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+              </div>
+              <h3 className="font-serif text-xl font-bold text-ink group-hover:text-accent-text transition-colors">CV Builder</h3>
+              <p className="text-sm text-muted leading-relaxed">
+                Create and edit single-column, ATS-safe resumes. Pre-filled with realistic sample data to start, and auto-saves to your local browser storage.
+              </p>
             </div>
-            <h3 className="font-serif text-xl font-bold text-ink">CV Builder</h3>
-            <p className="text-sm text-muted leading-relaxed">
-              Create and edit single-column, ATS-safe resumes. Pre-filled with realistic sample data to start, and auto-saves to your local browser storage.
-            </p>
-          </div>
-          <Link href="/builder/" className="mt-2">
-            <span className="text-sm font-semibold text-accent-text hover:text-accent inline-flex items-center gap-1">
-              Open Builder &rarr;
-            </span>
-          </Link>
-        </Card>
+            <div className="mt-2">
+              <span className="text-sm font-semibold text-accent-text group-hover:text-accent inline-flex items-center gap-1 transition-colors">
+                Open Builder &rarr;
+              </span>
+            </div>
+          </Card>
+        </Link>
 
-        <Card hoverEffect className="flex flex-col gap-3 justify-between">
-          <div className="flex flex-col gap-2">
-            <div className="text-accent-text bg-accent/10 p-2.5 rounded-xl w-fit">
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+        <Link href="/ats-checker/" className="block h-full group focus-ring rounded-2xl">
+          <Card hoverEffect className="h-full flex flex-col gap-3 justify-between">
+            <div className="flex flex-col gap-2">
+              <div className="text-accent-text bg-accent/10 p-2.5 rounded-xl w-fit group-hover:bg-accent/20 transition-colors">
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="font-serif text-xl font-bold text-ink group-hover:text-accent-text transition-colors">ATS Keyword Matcher</h3>
+              <p className="text-sm text-muted leading-relaxed">
+                Paste a target job description and compare it with your CV. Get an instant score, see missing industry keywords, and remove keyword stuffing.
+              </p>
             </div>
-            <h3 className="font-serif text-xl font-bold text-ink">ATS Keyword Matcher</h3>
-            <p className="text-sm text-muted leading-relaxed">
-              Paste a target job description and compare it with your CV. Get an instant score, see missing industry keywords, and remove keyword stuffing.
-            </p>
-          </div>
-          <Link href="/ats-checker/" className="mt-2">
-            <span className="text-sm font-semibold text-accent-text hover:text-accent inline-flex items-center gap-1">
-              Check ATS Score &rarr;
-            </span>
-          </Link>
-        </Card>
+            <div className="mt-2">
+              <span className="text-sm font-semibold text-accent-text group-hover:text-accent inline-flex items-center gap-1 transition-colors">
+                Check ATS Score &rarr;
+              </span>
+            </div>
+          </Card>
+        </Link>
 
-        <Card hoverEffect className="flex flex-col gap-3 justify-between">
-          <div className="flex flex-col gap-2">
-            <div className="text-accent-text bg-accent/10 p-2.5 rounded-xl w-fit">
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
+        <Link href="/cover-letter/" className="block h-full group focus-ring rounded-2xl">
+          <Card hoverEffect className="h-full flex flex-col gap-3 justify-between">
+            <div className="flex flex-col gap-2">
+              <div className="text-accent-text bg-accent/10 p-2.5 rounded-xl w-fit group-hover:bg-accent/20 transition-colors">
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h3 className="font-serif text-xl font-bold text-ink group-hover:text-accent-text transition-colors">Cover Letter</h3>
+              <p className="text-sm text-muted leading-relaxed">
+                Write a tailored cover letter using professional templates, customize recipient details, and export a polished PDF.
+              </p>
             </div>
-            <h3 className="font-serif text-xl font-bold text-ink">Cover Letter</h3>
-            <p className="text-sm text-muted leading-relaxed">
-              Write a tailored cover letter using professional templates, customize recipient details, and export a polished PDF.
-            </p>
-          </div>
-          <Link href="/cover-letter/" className="mt-2">
-            <span className="text-sm font-semibold text-accent-text hover:text-accent inline-flex items-center gap-1">
-              Write Cover Letter &rarr;
-            </span>
-          </Link>
-        </Card>
+            <div className="mt-2">
+              <span className="text-sm font-semibold text-accent-text group-hover:text-accent inline-flex items-center gap-1 transition-colors">
+                Write Cover Letter &rarr;
+              </span>
+            </div>
+          </Card>
+        </Link>
 
-        <Card hoverEffect className="flex flex-col gap-3 justify-between">
-          <div className="flex flex-col gap-2">
-            <div className="text-accent-text bg-accent/10 p-2.5 rounded-xl w-fit">
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-              </svg>
+        <Link href="/course/" className="block h-full group focus-ring rounded-2xl">
+          <Card hoverEffect className="h-full flex flex-col gap-3 justify-between">
+            <div className="flex flex-col gap-2">
+              <div className="text-accent-text bg-accent/10 p-2.5 rounded-xl w-fit group-hover:bg-accent/20 transition-colors">
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <h3 className="font-serif text-xl font-bold text-ink group-hover:text-accent-text transition-colors">CV Writing Course</h3>
+              <p className="text-sm text-muted leading-relaxed">
+                Read 9 bite-sized lessons explaining formats, structures, experience bullets,cover letters, and employment gaps. Test your knowledge with a quiz.
+              </p>
             </div>
-            <h3 className="font-serif text-xl font-bold text-ink">CV Writing Course</h3>
-            <p className="text-sm text-muted leading-relaxed">
-              Read 9 bite-sized lessons explaining formats, structures, experience bullets,cover letters, and employment gaps. Test your knowledge with a quiz.
-            </p>
-          </div>
-          <Link href="/course/" className="mt-2">
-            <span className="text-sm font-semibold text-accent-text hover:text-accent inline-flex items-center gap-1">
-              Start Learning &rarr;
-            </span>
-          </Link>
-        </Card>
+            <div className="mt-2">
+              <span className="text-sm font-semibold text-accent-text group-hover:text-accent inline-flex items-center gap-1 transition-colors">
+                Start Learning &rarr;
+              </span>
+            </div>
+          </Card>
+        </Link>
       </section>
 
       {/* Ad slot */}
-      <AdSlot slotId="home-page-ad" className="max-w-3xl mx-auto" />
+      <AdSlot slotId={AD_SLOTS.HOME} placement="home-below-cards" className="max-w-3xl mx-auto" />
 
       {/* FAQs Section */}
       <section className="max-w-2xl mx-auto w-full py-4">

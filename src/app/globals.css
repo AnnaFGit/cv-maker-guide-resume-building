@@ -52,12 +52,67 @@
   --font-mono: var(--font-mono), monospace;
 }
 
+html,
 body {
   background: var(--bg);
   color: var(--ink-2);
   font-family: var(--font-sans);
   margin: 0;
   padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Ensure AdSense ads cannot break containers or cause horizontal page scroll */
+.adsbygoogle {
+  max-width: 100% !important;
+}
+
+.adsbygoogle iframe {
+  max-width: 100% !important;
+}
+
+/* Automatically collapse unfilled ad containers so they never leave blank gaps */
+ins.adsbygoogle[data-ad-status="unfilled"],
+ins.adsbygoogle[data-ad-status="unfilled"] * {
+  display: none !important;
+  height: 0 !important;
+}
+
+/* Windows Desktop App — Guaranteed ad suppression for Microsoft Store certification */
+[data-platform="windows"] .adsbygoogle,
+[data-platform="windows"] [data-ad-placement],
+[data-platform="windows"] aside[aria-label^="Advertisement"],
+.platform-windows .adsbygoogle,
+.platform-windows [data-ad-placement],
+.platform-windows aside[aria-label^="Advertisement"] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  max-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Custom scrollbars matching warm editorial palette on desktop screens */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--muted-2);
+  }
 }
 
 /* Micro-label utility class as required by implementation plan */
@@ -86,4 +141,23 @@ body {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Modal Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scale-up {
+  animation: scaleUp 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }

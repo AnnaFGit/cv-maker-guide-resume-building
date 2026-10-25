@@ -5,6 +5,8 @@ import Link from "next/link";
 import Button from "@/components/ui/Button";
 import Toast from "@/components/ui/Toast";
 import Accordion from "@/components/ui/Accordion";
+import AdSlot from "@/components/ui/AdSlot";
+import { AD_SLOTS } from "@/lib/constants";
 import { openExternal } from "@/lib/bridge";
 
 interface Lesson {
@@ -235,6 +237,9 @@ export default function LessonClient({
           </Button>
         </div>
       </article>
+
+      {/* Ad slot between lesson content and navigation */}
+      <AdSlot slotId={AD_SLOTS.LESSON} placement="lesson-after-article" />
 
       {/* Prev / Next Pagination */}
       <footer className="flex items-center justify-between">

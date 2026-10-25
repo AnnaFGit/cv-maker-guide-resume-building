@@ -1,3 +1,5 @@
+import { getPlatform } from "@/lib/platform";
+
 declare global {
   interface Window {
     webkit?: {
@@ -11,20 +13,28 @@ declare global {
   }
 }
 
+/** True inside a native shell (iOS WKWebView or Windows WebView2). */
 export function isNative(): boolean {
-  return typeof window !== "undefined" && !!window.webkit?.messageHandlers?.bridge;
+  const platform = getPlatform();
+  return platform === "ios" || platform === "windows";
 }
 
 export function postMessage(message: { type: string; [key: string]: unknown }): void {
-  if (isNative()) {
-    try {
+  const platform = getPlatform();
+  try {
+    if (platform === "ios") {
       window.webkit?.messageHandlers?.bridge?.postMessage(message);
-    } catch (err) {
-      console.error("Failed to post message to native bridge:", err);
+      return;
     }
-  } else {
-    console.log("Native Bridge (Browser Fallback):", message);
+    if (platform === "windows") {
+      window.chrome?.webview?.postMessage(message);
+      return;
+    }
+  } catch (err) {
+    console.error("Failed to post message to native bridge:", err);
+    return;
   }
+  console.log("Native Bridge (Browser Fallback):", message);
 }
 
 export function openExternal(url: string): void {
@@ -33,6 +43,22 @@ export function openExternal(url: string): void {
   } else {
     window.open(url, "_blank", "noopener,noreferrer");
   }
+}
+
+/**
+ * Tells the Windows shell the current theme so it can colour the title bar.
+ * No-op on iOS and web (iOS shell does not handle this message).
+ */
+export function notifyTheme(theme: "light" | "dark"): void {
+  if (getPlatform() === "windows") {
+    postMessage({ type: "themeChanged", theme });
+  }
+}
+
+/** Touch-first devices (phones/tablets) get the share sheet; desktops get a file download. */
+function prefersShareSheet(): boolean {
+  if (typeof window === "undefined" || typeof navigator === "undefined") return false;
+  return navigator.maxTouchPoints > 0 && window.matchMedia("(pointer: coarse)").matches;
 }
 
 export function exportPDF(filename: string, dataBase64: string): void {
@@ -50,10 +76,11 @@ export function exportPDF(filename: string, dataBase64: string): void {
     const byteArray = new Uint8Array(byteNumbers);
     const blob = new Blob([byteArray], { type: "application/pdf" });
 
-    // 1. Try Web Share API (navigator.share) for iOS Safari and mobile wrappers
+    // 1. Try Web Share API (navigator.share) for iOS Safari and mobile wrappers.
+    //    Desktop browsers also support file sharing, but users there expect a download.
     const file = new File([blob], filename, { type: "application/pdf" });
     if (
-      typeof navigator !== "undefined" &&
+      prefersShareSheet() &&
       navigator.canShare &&
       navigator.canShare({ files: [file] })
     ) {

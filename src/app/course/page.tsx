@@ -1,5 +1,7 @@
 import { getAllLessons } from "@/lib/course";
 import CourseClient from "@/components/course/CourseClient";
+import AdSlot from "@/components/ui/AdSlot";
+import { AD_SLOTS } from "@/lib/constants";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -23,6 +25,8 @@ export default function CoursePage() {
       </div>
 
       <CourseClient lessons={lessons} />
+
+      <AdSlot slotId={AD_SLOTS.COURSE_LIST} placement="course-below-list" />
     </div>
   );
 }

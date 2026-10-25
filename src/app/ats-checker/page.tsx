@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 import ATSCheckerClient from "@/components/ats/ATSCheckerClient";
 import JsonLd from "@/components/ui/JsonLd";
-import { CANONICAL_URL, SITE_NAME } from "@/lib/constants";
+import AdSlot from "@/components/ui/AdSlot";
+import { AD_SLOTS, CANONICAL_URL, SITE_NAME } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "ATS Resume Checker",
@@ -41,6 +42,8 @@ export default function ATSPage() {
       </div>
 
       <ATSCheckerClient />
+
+      <AdSlot slotId={AD_SLOTS.ATS_CHECKER} placement="ats-below-checker" />
     </div>
   );
 }

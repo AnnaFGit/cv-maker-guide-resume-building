@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 import CVList from "@/components/builder/CVList";
 import JsonLd from "@/components/ui/JsonLd";
-import { CANONICAL_URL, SITE_NAME } from "@/lib/constants";
+import AdSlot from "@/components/ui/AdSlot";
+import { AD_SLOTS, CANONICAL_URL, SITE_NAME } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Free ATS CV Builder",
@@ -42,6 +43,8 @@ export default function BuilderPage() {
 
       {/* Client List (IndexedDB) */}
       <CVList />
+
+      <AdSlot slotId={AD_SLOTS.BUILDER} placement="builder-below-list" />
     </div>
   );
 }

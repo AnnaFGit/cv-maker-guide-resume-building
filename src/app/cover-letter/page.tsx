@@ -6,7 +6,8 @@ import Button from "@/components/ui/Button";
 import CLList from "@/components/coverletter/CLList";
 import JsonLd from "@/components/ui/JsonLd";
 import Accordion from "@/components/ui/Accordion";
-import { CANONICAL_URL, SITE_NAME } from "@/lib/constants";
+import AdSlot from "@/components/ui/AdSlot";
+import { AD_SLOTS, CANONICAL_URL, SITE_NAME } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Free Cover Letter Builder - Write a Tailored Cover Letter",
@@ -190,6 +191,9 @@ export default function CoverLetterPage() {
           ))}
         </div>
       </div>
+
+      {/* Ad slot between guide and sample */}
+      <AdSlot slotId={AD_SLOTS.COVER_LETTER} placement="cl-between-guide-sample" />
 
       {/* Sample Template */}
       <section className="flex flex-col gap-3">

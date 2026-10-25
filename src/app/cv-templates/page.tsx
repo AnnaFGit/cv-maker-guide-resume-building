@@ -3,7 +3,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
-import { SITE_NAME } from "@/lib/constants";
+import AdSlot from "@/components/ui/AdSlot";
+import { AD_SLOTS, SITE_NAME } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "ATS Resume Templates - Best Layouts for Job Applications",
@@ -90,6 +91,9 @@ export default function TemplatesPillarPage() {
           </Card>
         ))}
       </div>
+
+      {/* Ad slot between templates and CTA */}
+      <AdSlot slotId={AD_SLOTS.CV_TEMPLATES} placement="templates-above-cta" />
 
       {/* CTA Section */}
       <div className="flex flex-col sm:flex-row gap-4 justify-between items-center bg-surface border border-border p-6 rounded-2xl">
